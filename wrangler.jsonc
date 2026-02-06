@@ -63,17 +63,19 @@
       "tag": "v1",
     },
   ],
-  // R2 bucket disabled for lite deployment
-  // "r2_buckets": [
-  //   {
-  //     "binding": "MOLTBOT_BUCKET",
-  //     "bucket_name": "moltbot-data",
-  //   },
-  // ],
-  // Cron trigger disabled
-  // "triggers": {
-  //   "crons": ["*/5 * * * *"],
-  // },
+  // R2 bucket for persistent storage (moltbot data, conversations, etc.)
+  "r2_buckets": [
+    {
+      "binding": "MOLTBOT_BUCKET",
+      "bucket_name": "moltbot-data",
+    },
+  ],
+  // Cron trigger to sync moltbot data to R2 every 5 minutes
+  "triggers": {
+    "crons": [
+      "*/5 * * * *"
+    ],
+  },
   // Browser Rendering binding for CDP shim
   "browser": {
     "binding": "BROWSER",
