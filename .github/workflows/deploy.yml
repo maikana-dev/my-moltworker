@@ -34,8 +34,6 @@ jobs:
           secrets: |
             ANTHROPIC_API_KEY
             MOLTBOT_GATEWAY_TOKEN
-            R2_ACCESS_KEY_ID
-            R2_SECRET_ACCESS_KEY
             CF_ACCOUNT_ID
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
